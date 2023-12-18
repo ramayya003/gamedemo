@@ -1,0 +1,42 @@
+<div class="bg">
+    <div style="position: absolute; top: 0; width: 100%;">
+        <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <span class="title">Tournament</span>
+            </div>
+            <div fxLayout="row" class="pe-5">
+                <div class="pe-5">
+                    <button mat-button class="btn_header"  [routerLink]="[ '/auth/main/home']">Home</button>
+                </div>
+                <div class="pe-5">
+                    <button mat-button class="btn_header" [routerLink]="[ '/auth/main/create']">Create Tournament</button>
+                </div>
+                <div class="pe-5">
+                    <button mat-button class="btn_header" [routerLink]="[ '/auth/main/profile']">Profile</button>
+                </div>
+                
+            </div>
+        </mat-toolbar>
+    </div>
+    <div class="bg1">
+        <div class="logincard">
+            <div class="p-4">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                    <span class="logintitle">Profile</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center" class="pt-2 pb-2">
+                    <img src="../../../assets/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png" alt="" width="150">
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start center" class="ps-5 pb-1">
+                    <span class="login_lable"> Name: {{name}}</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="start center" class="ps-5 pb-3">
+                    <span>Email : {{email}}</span>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center" class="pb-2">
+                    <a mat-button class="login_btn" [routerLink]="[ '/' ]">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

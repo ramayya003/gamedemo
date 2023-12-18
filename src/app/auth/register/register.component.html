@@ -1,0 +1,44 @@
+<div class="bg">
+    <div class="logincard">
+        <form class="example-form p-4" [formGroup]="regfileForm" (ngSubmit)="onSubmit()">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <span class="logintitle">Register</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="ps-5">
+                <span class="login_lable">First Name :</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput placeholder="First Name" formControlName="firstName">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="ps-5">
+                <span class="login_lable">Last Name :</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput placeholder="Last name" formControlName="lastName">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="ps-5">
+                <span class="login_lable">Username or Email :</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput placeholder="Username" formControlName="email">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" class="ps-5">
+                <span>Password :</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <input matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" class="pb-2">
+                <button mat-button class="login_btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>

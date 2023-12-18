@@ -1,0 +1,42 @@
+<div class="bg">
+    <div>
+        <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <span class="title">Tournament</span>
+            </div>
+            <div fxLayout="row" class="pe-5">
+                <div class="pe-5">
+                    <button mat-button class="btn_header"  [routerLink]="[ '/auth/main/home']">Home</button>
+                </div>
+                <div class="pe-5">
+                    <button mat-button class="btn_header" [routerLink]="[ '/auth/main/create']">Create Tournament</button>
+                </div>
+                <div class="pe-5">
+                    <button mat-button class="btn_header" [routerLink]="[ '/auth/main/profile']">Profile</button>
+                </div>
+                
+            </div>
+        </mat-toolbar>
+    </div>
+    <div class="container">
+        <div fxLayout="row wrap">
+            <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="33" fxFlex.lg="20" fxFlex.xl="20" class="p-3" *ngFor="let listdata of listdatas">
+                <div>
+                    <mat-card>
+                        <div fxLayoutAlign="center center">
+                            <img src="../../../assets/controllers.svg" alt="" class="img_card">
+                        </div>
+                        <div fxLayoutAlign="center center" class="pt-1">
+                            <span>{{listdata.name}}</span>
+                        </div>
+                        <div fxLayoutAlign="center center" class="pt-1">
+                            <span>{{listdata.date}}</span>
+                        </div>
+                        <div fxLayoutAlign="center center" class="pb-3">
+                            <button mat-button (click)="openDialog()">Register</button>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+    </div>
+</div>
